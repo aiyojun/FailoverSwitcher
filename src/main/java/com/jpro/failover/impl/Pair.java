@@ -1,4 +1,4 @@
-package com.jpro.util;
+package com.jpro.failover.impl;
 
 public class Pair<T1, T2> {
     private T1 key;

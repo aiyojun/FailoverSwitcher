@@ -1,4 +1,4 @@
-package com.jpro.util;
+package com.jpro.failover.impl;
 
 public class NumberUtil {
     public static byte[] long2Byte(long v) {
@@ -14,6 +14,14 @@ public class NumberUtil {
         long values = 0;
         for (int i = 0; i < 8; i++) {
             values <<= 8; values|= (b[i] & 0xff);
+        }
+        return values;
+    }
+
+    public static long byte2Long(byte[] b, int start) {
+        long values = 0;
+        for (int i = 0; i < 8; i++) {
+            values <<= 8; values|= (b[start + i] & 0xff);
         }
         return values;
     }
